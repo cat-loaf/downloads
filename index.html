@@ -53,11 +53,6 @@
                     type: item.type === 'tree' ? 'folder' : 'file'
                 }));
             
-            // Add the fs folder itself if it exists
-            if (fsFiles.length > 0) {
-                fsFiles.unshift({ path: FS_FOLDER, type: 'folder' });
-            }
-            
             return fsFiles;
         } catch (error) {
             console.warn('Failed to fetch from GitHub API, using fallback:', error);
